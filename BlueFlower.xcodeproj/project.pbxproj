@@ -24,6 +24,9 @@
 		3F928D0216455BF600B4C2BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F928CDA16455BF500B4C2BF /* Foundation.framework */; };
 		3F928D0A16455BF600B4C2BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F928D0816455BF600B4C2BF /* InfoPlist.strings */; };
 		3F928D0D16455BF600B4C2BF /* BlueFlowerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F928D0C16455BF600B4C2BF /* BlueFlowerTests.m */; };
+		3F928D1816455C1A00B4C2BF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F928D1716455C1A00B4C2BF /* CoreBluetooth.framework */; };
+		3F928D1B1645612200B4C2BF /* BleDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F928D1A1645612200B4C2BF /* BleDiscovery.m */; };
+		3F928D1E165661CD00B4C2BF /* BleFlowerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F928D1D165661CD00B4C2BF /* BleFlowerService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,11 @@
 		3F928D0916455BF600B4C2BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F928D0B16455BF600B4C2BF /* BlueFlowerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueFlowerTests.h; sourceTree = "<group>"; };
 		3F928D0C16455BF600B4C2BF /* BlueFlowerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueFlowerTests.m; sourceTree = "<group>"; };
+		3F928D1716455C1A00B4C2BF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3F928D191645612200B4C2BF /* BleDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDiscovery.h; sourceTree = "<group>"; };
+		3F928D1A1645612200B4C2BF /* BleDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDiscovery.m; sourceTree = "<group>"; };
+		3F928D1C165661CD00B4C2BF /* BleFlowerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleFlowerService.h; sourceTree = "<group>"; };
+		3F928D1D165661CD00B4C2BF /* BleFlowerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleFlowerService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F928D1816455C1A00B4C2BF /* CoreBluetooth.framework in Frameworks */,
 				3F928CD916455BF500B4C2BF /* UIKit.framework in Frameworks */,
 				3F928CDB16455BF500B4C2BF /* Foundation.framework in Frameworks */,
 				3F928CDD16455BF500B4C2BF /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +98,7 @@
 		3F928CC916455BF500B4C2BF = {
 			isa = PBXGroup;
 			children = (
+				3F928D1616455C0300B4C2BF /* BLE */,
 				3F928CDE16455BF500B4C2BF /* BlueFlower */,
 				3F928D0516455BF600B4C2BF /* BlueFlowerTests */,
 				3F928CD716455BF500B4C2BF /* Frameworks */,
@@ -108,6 +118,7 @@
 		3F928CD716455BF500B4C2BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F928D1716455C1A00B4C2BF /* CoreBluetooth.framework */,
 				3F928CD816455BF500B4C2BF /* UIKit.framework */,
 				3F928CDA16455BF500B4C2BF /* Foundation.framework */,
 				3F928CDC16455BF500B4C2BF /* CoreGraphics.framework */,
@@ -161,6 +172,17 @@
 				3F928D0816455BF600B4C2BF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F928D1616455C0300B4C2BF /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				3F928D191645612200B4C2BF /* BleDiscovery.h */,
+				3F928D1A1645612200B4C2BF /* BleDiscovery.m */,
+				3F928D1C165661CD00B4C2BF /* BleFlowerService.h */,
+				3F928D1D165661CD00B4C2BF /* BleFlowerService.m */,
+			);
+			name = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +299,8 @@
 				3F928CE516455BF500B4C2BF /* main.m in Sources */,
 				3F928CE916455BF500B4C2BF /* AppDelegate.m in Sources */,
 				3F928CF816455BF500B4C2BF /* ViewController.m in Sources */,
+				3F928D1B1645612200B4C2BF /* BleDiscovery.m in Sources */,
+				3F928D1E165661CD00B4C2BF /* BleFlowerService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +413,7 @@
 		3F928D1116455BF600B4C2BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueFlower/BlueFlower-Prefix.pch";
 				INFOPLIST_FILE = "BlueFlower/BlueFlower-Info.plist";
@@ -400,6 +425,7 @@
 		3F928D1216455BF600B4C2BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlueFlower/BlueFlower-Prefix.pch";
 				INFOPLIST_FILE = "BlueFlower/BlueFlower-Info.plist";
